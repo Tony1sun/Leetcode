@@ -6,7 +6,7 @@ func longestPalindrome(s string) string {
 	//双指针法
 	start, end := 0, 0 //最长回文子串的起始\末尾位置
 
-	for i := 0; i < len(s); {
+	for i := 0; i < len(s); i++ {
 		// 左右指针，向两边扩展
 		l, r := i, i
 
@@ -14,10 +14,8 @@ func longestPalindrome(s string) string {
 		for r < len(s)-1 && s[r] == s[r+1] { //防止越界，一直向后比较，不相等停止
 			r++
 		}
-
 		// i到达r所扩展的最远长度的下一个字符
-		i = r + 1
-
+		// i = r + 1
 		// 两边一起扩展
 		for l > 0 && r < len(s)-1 && s[l-1] == s[r+1] {
 			l--
@@ -33,7 +31,7 @@ func longestPalindrome(s string) string {
 }
 
 func main() {
-	str := "adac"
+	str := "adactnntk"
 	str1 := longestPalindrome(str)
 	fmt.Println(str1)
 }
