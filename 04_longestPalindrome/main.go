@@ -14,7 +14,7 @@ func longestPalindrome(s string) string {
 		for r < len(s)-1 && s[r] == s[r+1] { //防止越界，一直向后比较，不相等停止
 			r++
 		}
-		// i到达r所扩展的最远长度的下一个字符
+		// i到达r所扩展的最远长度的下一个字符w
 		i = r + 1
 		// 两边一起扩展
 		for l > 0 && r < len(s)-1 && s[l-1] == s[r+1] {
