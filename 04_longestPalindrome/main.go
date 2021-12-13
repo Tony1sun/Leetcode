@@ -6,7 +6,7 @@ func longestPalindrome(s string) string {
 	//双指针法
 	start, end := 0, 0 //最长回文子串的起始\末尾位置
 
-	for i := 0; i < len(s);  {
+	for i := 0; i < len(s); {
 		// 左右指针，向两边扩展
 		l, r := i, i
 
@@ -31,7 +31,7 @@ func longestPalindrome(s string) string {
 }
 
 func main() {
-	str := "adac"
+	str := "adacct"
 	str1 := longestPalindrome(str)
 	fmt.Println(str1)
 }
