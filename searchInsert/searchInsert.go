@@ -24,6 +24,7 @@ package Leetcode
 // 	return left + 1
 // }
 
+// 二分法
 func searchInsert(nums []int, target int) int {
 	left := 0
 	right := len(nums)
