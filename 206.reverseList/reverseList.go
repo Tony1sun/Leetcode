@@ -5,17 +5,18 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// 反转链表
 func reverseList(head *ListNode) *ListNode {
 	var pre *ListNode
 	cur := head
 	for cur != nil {
-		// 保存头节点的下一个节点
+		// 获取下一个结点
 		next := cur.Next
-		// 将头节点指向前一个节点
+		// 将下一个结点指向前一个节点
 		cur.Next = pre
-		// 更新前一个节点
+		// 将当前结点赋值给前结点
 		pre = cur
-		// 更新头节点
+		// 将next结点赋值给当前结点，用于继续往下执行
 		cur = next
 	}
 	return pre
