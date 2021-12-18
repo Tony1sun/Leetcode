@@ -1,26 +1,32 @@
 package Leetcode
 
-import "github.com/halfrost/LeetCode-Go/structures"
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
 
-// type ListNode struct {
-// 	Val  int
-// 	Next *ListNode
-// }
-
-type ListNode = structures.ListNode
-
+// 141. 环形链表
 // 快慢指针
+// https://leetcode-cn.com/problems/linked-list-cycle/solution/dong-hua-yan-shi-141huan-xing-lian-biao-b99vd/
+// 给你一个链表的头节点 head ，判断链表中是否有环。
+// 如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，
+// 评测系统内部使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。
+// 如果链表中存在环，则返回 true 。 否则，返回 false 。
+// 示例 1：
+// 输入：head = [3,2,0,-4], pos = 1
+// 输出：true
+// 解释：链表中有一个环，其尾部连接到第二个节点。
+
 func hasCycle(head *ListNode) bool {
 	slow, fast := head, head
 	for fast != nil { // 快指针指向真实节点
-		if fast.Next == nil { // 说明没有环
+		if fast.Next == nil { // 如果Next就出去了，说明没有环
 			return false
 		}
-		slow = slow.Next
-		fast = fast.Next.Next // 慢的走一步，快的走两步
-		if slow == fast {     // 快慢指针相遇，有环
+		slow, fast = slow.Next, fast.Next.Next // 慢的走一步 快的走两步
+		if slow == fast {                      // 快慢指针相遇，有环
 			return true
 		}
 	}
-	return false // fash走出去了，没有环
+	return false // fast走出去了，没有环
 }

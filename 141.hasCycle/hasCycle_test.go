@@ -3,45 +3,26 @@ package Leetcode
 import (
 	"fmt"
 	"testing"
-
-	"github.com/halfrost/LeetCode-Go/structures"
 )
 
-type question141 struct {
-	para141
-	ans141
-}
+func Test_Problem141(t *testing.T) {
 
-// para 是参数
-// one 代表第一个参数
-type para141 struct {
-	one []int
-}
-
-// ans 是答案
-type ans141 struct {
-	one bool
-}
-
-func Test_hasCycle(t *testing.T) {
-	qs := []question141{
-		{
-			para141{[]int{3, 2, 0, -4}},
-			ans141{true},
-		},
-		{
-			para141{[]int{1, 2}},
-			ans141{false},
-		},
-		{
-			para141{[]int{1}},
-			ans141{false},
-		},
-	}
-	fmt.Printf("------------------------Leetcode hasCycle 141------------------------\n")
-	for _, q := range qs {
-		_, p := q.ans141, q.para141
-		fmt.Printf("【input】:%v       【output】:%v\n", p, hasCycle(structures.Ints2List(p.one)))
-	}
-	fmt.Printf("\n\n\n")
+	aa := ListNode{Val: 1}
+	bb := ListNode{Val: 2}
+	// cc := ListNode{Val: 4}
+	// d := ListNode{Val:  -4}
+	aa.Next = &bb
+	bb.Next = &aa
+	// cc.Next = &bb
+	//d.Next = &b
+	fmt.Println(hasCycle(&aa))
+	a := ListNode{Val: 3}
+	b := ListNode{Val: 2}
+	c := ListNode{Val: 0}
+	d := ListNode{Val: -4}
+	a.Next = &b
+	b.Next = &c
+	c.Next = &d
+	d.Next = &b
+	fmt.Println(hasCycle(&a))
 }
