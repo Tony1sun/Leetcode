@@ -5,8 +5,7 @@ import (
 	"testing"
 )
 
-func Test_Problem24(t *testing.T) {
-
+func Test_removeNthFromEnd(t *testing.T) {
 	a := &ListNode{Val: 1}
 	b := &ListNode{Val: 2}
 	c := &ListNode{Val: 3}
@@ -15,7 +14,7 @@ func Test_Problem24(t *testing.T) {
 	a.Next = b
 	b.Next = c
 	c.Next = d
-	h := swapPairs(a)
+	h := removeNthFromEnd(a, 2)
 	for h != nil {
 		fmt.Println(h.Val)
 		h = h.Next
