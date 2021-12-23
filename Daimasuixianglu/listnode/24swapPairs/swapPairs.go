@@ -22,7 +22,6 @@ type ListNode struct {
 // 	return dummy
 // }
 
-// [1>2>3>4]
 func swapPairs(head *ListNode) *ListNode {
 	dummy := &ListNode{
 		Next: head,
@@ -31,11 +30,13 @@ func swapPairs(head *ListNode) *ListNode {
 	for head != nil && head.Next != nil {
 		first := head
 		second := head.Next
-		// 交换前两个节点
+
+		// 交换节点
 		first.Next = second.Next
 		second.Next = first
 		preNode.Next = second
-		// 把位置移到前一个节点去
+
+		// 结点往前移动
 		preNode = first
 		head = first.Next
 	}

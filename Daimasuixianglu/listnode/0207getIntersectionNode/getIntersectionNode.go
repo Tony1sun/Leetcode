@@ -2,6 +2,8 @@ package Leetcode
 
 import "github.com/halfrost/LeetCode-Go/structures"
 
+// import "github.com/halfrost/LeetCode-Go/structures"
+
 // type ListNode struct {
 // 	Val  int
 // 	Next *ListNode
