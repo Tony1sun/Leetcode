@@ -13,12 +13,12 @@ func isAnagram(s string, t string) bool {
 	exists := make(map[byte]int)
 	for i := 0; i < len(s); i++ {
 		if v, ok := exists[s[i]]; v >= 0 && ok {
-			//
 			exists[s[i]] = v + 1
 		} else {
 			exists[s[i]] = 1
 		}
 	}
+
 	for i := 0; i < len(t); i++ {
 		if v, ok := exists[t[i]]; v >= 1 && ok {
 			exists[t[i]] = v - 1
