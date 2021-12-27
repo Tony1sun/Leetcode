@@ -6,7 +6,7 @@ import (
 )
 
 func Test_canConstruct(t *testing.T) {
-	ransomNote := "cc"
-	magazine := "ccb"
+	ransomNote := "aa"
+	magazine := "aab"
 	fmt.Println(canConstruct(ransomNote, magazine))
 }
