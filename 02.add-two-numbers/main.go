@@ -6,11 +6,12 @@ import "fmt"
 func TwoSum(nums []int, target int) []int {
 	map1 := make(map[int]int)
 	for index, value := range nums {
+		// 如果存在值为target-value的数，将其坐标赋值给index2
 		index2, ok := map1[target-value]
 		if ok {
 			return []int{index2, index}
 		}
-		// 如果没有找到，就放到哈希表
+		// 如果不存在就将该值和下标放入哈希表
 		map1[value] = index
 	}
 	return nil
