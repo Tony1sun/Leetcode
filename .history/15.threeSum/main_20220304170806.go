@@ -41,7 +41,6 @@ func threeSum(nums []int) [][]int {
 	return res
 }
 
-
 func threeSum(nums []int) [][]int {
 	sort.Ints(nums)
 	res := [][]int{}
@@ -54,7 +53,7 @@ func threeSum(nums []int) [][]int {
 		if i > 0 && n1 == nums[i-1] {
 			continue
 		}
-		l, r := i+2, len(nums)-1
+		l, r := i+1, len(nums)-1
 		for l < r {
 			n2, n3 := nums[l], nums[r]
 			if n1+n2+n3 == 0 {

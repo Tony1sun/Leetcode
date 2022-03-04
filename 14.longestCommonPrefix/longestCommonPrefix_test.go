@@ -6,6 +6,6 @@ import (
 )
 
 func Test_longestCommonPrefixtlo(t *testing.T) {
-	strs := []string{"flower", "flow", "flight"}
+	strs := []string{"flower", "fowera", "flight"}
 	fmt.Println(longestCommonPrefix(strs))
 }

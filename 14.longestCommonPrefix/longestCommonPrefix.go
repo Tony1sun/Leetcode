@@ -24,7 +24,7 @@ func longestCommonPrefix(strs []string) string {
 
 	result := strs[0]
 	for _, value := range strs {
-		// 如果result在value出现
+		// 如果result在value出现 子串result在字符串value中第一次出现的位置
 		for strings.Index(value, result) != 0 {
 			// 消减result，直到result和value匹配
 			result = result[0 : len(result)-1]
@@ -37,6 +37,6 @@ func longestCommonPrefix(strs []string) string {
 }
 
 func main() {
-	strs := []string{"flower", "flow", "flight"}
+	strs := []string{"flower", "flowera", "flight"}
 	fmt.Println(longestCommonPrefix(strs))
 }
