@@ -6,7 +6,6 @@ import (
 )
 
 func threeSum(nums []int) [][]int {
-	// 先排序
 	sort.Ints(nums)
 	res := [][]int{}
 
@@ -18,7 +17,6 @@ func threeSum(nums []int) [][]int {
 		if i > 0 && n1 == nums[i-1] {
 			continue
 		}
-		// 左右指针
 		l, r := i+1, len(nums)-1
 		for l < r {
 			n2, n3 := nums[l], nums[r]
@@ -41,6 +39,6 @@ func threeSum(nums []int) [][]int {
 }
 
 func main() {
-	nums := []int{-1, 0, 1, 2, -1, -4}
+	nums := []int{1, 0, 1, 2, -1, -4}
 	fmt.Println(threeSum(nums))
 }

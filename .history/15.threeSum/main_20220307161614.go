@@ -6,7 +6,6 @@ import (
 )
 
 func threeSum(nums []int) [][]int {
-	// 先排序
 	sort.Ints(nums)
 	res := [][]int{}
 
@@ -18,7 +17,6 @@ func threeSum(nums []int) [][]int {
 		if i > 0 && n1 == nums[i-1] {
 			continue
 		}
-		// 左右指针
 		l, r := i+1, len(nums)-1
 		for l < r {
 			n2, n3 := nums[l], nums[r]
@@ -40,7 +38,12 @@ func threeSum(nums []int) [][]int {
 	return res
 }
 
+作者：xiao_ben_zhu
+链接：https://leetcode-cn.com/problems/3sum/solution/zhi-zhen-yi-dong-guo-cheng-zhong-tiao-guo-zhong-fu/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 func main() {
-	nums := []int{-1, 0, 1, 2, -1, -4}
+	nums := []int{1, 0, 1, 2, -1, -4}
 	fmt.Println(threeSum(nums))
 }

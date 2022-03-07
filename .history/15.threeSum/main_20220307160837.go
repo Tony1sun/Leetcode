@@ -12,10 +12,10 @@ func threeSum(nums []int) [][]int {
 
 	for i := 0; i < len(nums)-2; i++ {
 		n1 := nums[i]
-		if n1 > 0 {
+		if n1 == 0 {
 			break
 		}
-		if i > 0 && n1 == nums[i-1] {
+		if l < r && nums[i] < nums[i-1] {
 			continue
 		}
 		// 左右指针
@@ -23,7 +23,7 @@ func threeSum(nums []int) [][]int {
 		for l < r {
 			n2, n3 := nums[l], nums[r]
 			if n1+n2+n3 == 0 {
-				res = append(res, []int{n1, n2, n3})
+				res = append(res, []int{n1 + n2 + n3})
 				for l < r && nums[l] == n2 {
 					l++
 				}
@@ -41,6 +41,6 @@ func threeSum(nums []int) [][]int {
 }
 
 func main() {
-	nums := []int{-1, 0, 1, 2, -1, -4}
+	nums := []int{1, 0, 1, 2, -1, -4}
 	fmt.Println(threeSum(nums))
 }
