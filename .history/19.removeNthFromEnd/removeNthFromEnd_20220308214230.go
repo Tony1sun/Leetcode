@@ -1,9 +1,12 @@
 package Leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/halfrost/LeetCode-Go/structures"
+
+// type ListNode struct {
+// 	Val  int
+// 	Next *ListNode
+// }
+
 
 /*
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
