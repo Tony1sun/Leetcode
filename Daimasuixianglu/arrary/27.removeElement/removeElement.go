@@ -8,18 +8,18 @@ package Leetcode
 // 示例 1: 给定 nums = [3,2,2,3], val = 3, 函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。 你不需要考虑数组中超出新长度后面的元素。
 // 示例 2: 给定 nums = [0,1,2,2,3,0,4,2], val = 2, 函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。
 // 你不需要考虑数组中超出新长度后面的元素。
-// func removeElement(nums []int, val int) int {
-// 	length := len(nums)
-// 	res := 0
-// 	for i := 0; i < length; i++ {
-// 		/// 如果i不等于val，就添加到res
-// 		if nums[i] != val {
-// 			nums[res] = nums[i]
-// 			res++
-// 		}
-// 	}
-// 	return res
-// }
+func removeElement(nums []int, val int) int {
+	length := len(nums)
+	res := 0
+	for i := 0; i < length; i++ {
+		/// 如果i不等于val，就添加到res
+		if nums[i] != val {
+			nums[res] = nums[i]
+			res++
+		}
+	}
+	return res
+}
 
 // 双指针法
 func removeElement1(nums []int, val int) int {
