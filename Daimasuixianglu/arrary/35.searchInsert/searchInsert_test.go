@@ -6,7 +6,6 @@ import (
 )
 
 func Test_searchInsert(t *testing.T) {
-	nums := []int{1, 3, 5, 7, 9}
-	nums1 := searchInsert(nums, 2)
-	fmt.Println(nums1)
+	nums := []int{1, 3, 5, 6}
+	fmt.Println(searchInsert(nums, 7))
 }

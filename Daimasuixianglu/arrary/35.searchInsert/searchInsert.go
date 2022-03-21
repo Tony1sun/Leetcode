@@ -12,29 +12,29 @@ package Leetcode
 // }
 
 // 借助游标法
-// func searchInsert(nums []int, target int) int {
-// 	var left = 0
-// 	for i := 0; i < len(nums); i++ {
-// 		if nums[i] < target {
-// 			left++
-// 		} else {
-// 			return left
-// 		}
-// 	}
-// 	return left + 1
-// }
-
-// 二分法
 func searchInsert(nums []int, target int) int {
 	left := 0
-	right := len(nums)
-	for left < right {
-		middle := (right + left) / 2
-		if nums[middle] >= target {
-			right = middle
+	for i := 0; i < len(nums); i++ {
+		if nums[i] < target {
+			left++
 		} else {
-			left = middle + 1
+			return left
 		}
 	}
 	return left
 }
+
+// 二分法
+// func searchInsert(nums []int, target int) int {
+// 	left := 0
+// 	right := len(nums)
+// 	for left < right {
+// 		middle := (right + left) / 2
+// 		if nums[middle] >= target {
+// 			right = middle
+// 		} else {
+// 			left = middle + 1
+// 		}
+// 	}
+// 	return left
+// }
