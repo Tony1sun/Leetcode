@@ -22,3 +22,19 @@ func search(nums []int, target int) int {
 	}
 	return -1
 }
+
+func search1(nums []int, target int) int {
+	high := len(nums) - 1
+	low := 0
+	for low <= high {
+		mid := (high + low) / 2
+		if nums[mid] == target {
+			return mid
+		} else if nums[mid] > target {
+			high = mid - 1
+		} else {
+			low = mid + 1
+		}
+	}
+	return -1
+}
