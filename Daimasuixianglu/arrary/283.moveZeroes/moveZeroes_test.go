@@ -66,4 +66,5 @@ func Test_Problem283(t *testing.T) {
 		fmt.Printf("【output】:%v\n", p.one)
 	}
 	fmt.Printf("\n\n\n")
+
 }
