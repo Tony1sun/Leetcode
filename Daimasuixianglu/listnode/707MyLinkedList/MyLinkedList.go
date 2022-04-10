@@ -31,7 +31,7 @@ func (this *MyLinkedList) Get(index int) int {
 }
 
 // 新增节点的next指向现在的头，新的头指向新增的节点；
-// 注意在空链表第一次新增的情形，须头尾均指向新增节点。最后将链表长度加1。
+// 如果是空链表第一次新增的情形，须头尾均指向新增节点。最后将链表长度加1。
 func (this *MyLinkedList) AddAtHead(val int) {
 	node := &Node{val, nil}
 	if 0 == this.len {
