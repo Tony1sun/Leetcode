@@ -5,6 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// https://leetcode-cn.com/problems/swap-nodes-in-pairs/
 // 24. 两两交换链表中的节点
 // func swapPairs(head *ListNode) *ListNode {
 // 	dummy := &ListNode{
@@ -36,7 +37,7 @@ func swapPairs(head *ListNode) *ListNode {
 		second.Next = first
 		preNode.Next = second
 
-		// 结点往前移动
+		// 节点往前移动
 		preNode = first
 		head = first.Next
 	}

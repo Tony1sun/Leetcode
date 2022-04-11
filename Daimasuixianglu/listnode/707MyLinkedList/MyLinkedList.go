@@ -38,8 +38,9 @@ func (this *MyLinkedList) AddAtHead(val int) {
 		this.head = node
 		this.tail = node
 	} else {
-		node.next = this.head
-		this.head = node
+		// node.next = this.head
+		// this.head = node
+		node.next, this.head = this.head, node
 	}
 	this.len++
 }

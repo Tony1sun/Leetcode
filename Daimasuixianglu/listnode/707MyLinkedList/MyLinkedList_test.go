@@ -27,6 +27,8 @@ func Test_MyLinkedList(t *testing.T) {
 	fmt.Printf("obj = %v\n", MList2Ints(&obj))
 	obj.AddAtHead(36)
 	fmt.Printf("obj = %v\n", MList2Ints(&obj))
+	obj.DeleteAtIndex(4)
+	fmt.Printf("obj = %v\n", MList2Ints(&obj))
 	obj.AddAtHead(34)
 	fmt.Printf("obj = %v\n", MList2Ints(&obj))
 	obj.AddAtTail(91)

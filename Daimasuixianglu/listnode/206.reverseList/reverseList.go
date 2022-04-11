@@ -5,6 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// https://leetcode-cn.com/problems/reverse-linked-list/
 // 反转链表
 func reverseList(head *ListNode) *ListNode {
 	var pre *ListNode
