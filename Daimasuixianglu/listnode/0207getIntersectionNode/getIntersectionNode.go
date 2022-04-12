@@ -2,8 +2,8 @@ package Leetcode
 
 import "github.com/halfrost/LeetCode-Go/structures"
 
-// import "github.com/halfrost/LeetCode-Go/structures"
-
+// https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/
+// 02.07. 链表相交
 // type ListNode struct {
 // 	Val  int
 // 	Next *ListNode
