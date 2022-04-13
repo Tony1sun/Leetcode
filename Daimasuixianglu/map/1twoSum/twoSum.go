@@ -6,7 +6,8 @@ package Leetcode
 func twoSum(nums []int, target int) []int {
 	m := make(map[int]int)
 	for index, value := range nums {
-		index2, ok := m[target-value]
+		targetNum := target - value
+		index2, ok := m[targetNum]
 		if ok {
 			return []int{index2, index}
 		}
