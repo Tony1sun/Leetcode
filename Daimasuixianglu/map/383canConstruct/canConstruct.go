@@ -12,11 +12,11 @@ package Leetcode
 func canConstruct(ransomNote string, magazine string) bool {
 	record := make([]int, 26)
 	for _, v := range magazine {
-		record[v-'b']++
+		record[v-97]++
 	}
 	for _, v := range ransomNote {
-		record[v-'b']--
-		if record[v-'b'] < 0 {
+		record[v-97]--
+		if record[v-97] < 0 {
 			return false
 		}
 	}
