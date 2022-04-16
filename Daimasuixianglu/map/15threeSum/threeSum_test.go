@@ -7,5 +7,5 @@ import (
 
 func Test_threeSum(t *testing.T) {
 	nums := []int{-1, 0, 1, 2, -1, -4}
-	fmt.Println(threeSum1(nums))
+	fmt.Println(threeSum(nums))
 }
