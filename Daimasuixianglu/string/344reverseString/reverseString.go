@@ -1,5 +1,6 @@
 package Leetcode
 
+// https://leetcode-cn.com/problems/reverse-string/
 func reverseString(s []byte) {
 	left := 0
 	right := len(s) - 1
