@@ -39,6 +39,10 @@ func Test_Problem151(t *testing.T) {
 			para151{"a good   example"},
 			ans151{"example good a"},
 		},
+		{
+			para151{"a go od   exam ple"},
+			ans151{"example good a"},
+		},
 	}
 
 	fmt.Printf("------------------------Leetcode Problem 151------------------------\n")
