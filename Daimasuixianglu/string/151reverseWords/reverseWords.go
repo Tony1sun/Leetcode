@@ -29,7 +29,7 @@ func reverseWords(s string) string {
 		fastIndex++
 	}
 	// 删除单词间冗余空格
-	for fastIndex := 0; fastIndex < len(b); fastIndex++ {
+	for ; fastIndex < len(b); fastIndex++ {
 		if fastIndex-1 > 0 && b[fastIndex-1] == b[fastIndex] && b[fastIndex] == ' ' {
 			continue
 		}
