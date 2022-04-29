@@ -43,6 +43,7 @@ func strStr(haystack string, needle string) int {
 	return -1
 }
 
+// 前缀表
 func getNext(next []int, s string) {
 	j := 0
 	next[0] = j // 记录最长相等前后缀长度
