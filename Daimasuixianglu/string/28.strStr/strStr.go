@@ -29,12 +29,13 @@ func strStr(haystack string, needle string) int {
 	next := make([]int, n)
 	getNext(next, needle)
 	for i := 0; i < len(haystack); i++ {
-		for j > 0 && haystack[i] != needle[j] {
-			j = next[j-1] // 回退到j的前一位
+		for j > 0 && haystack[i] != needle[j] { // 不匹配
+			j = next[j-1] // 回退到j的前一位,寻找之前匹配的位置
 		}
-		if haystack[i] == needle[j] {
-			j++
+		if haystack[i] == needle[j] { // 匹配，j和i同时向后移动
+			j++ // i的增加在for循环里
 		}
+		// 文本串里出现了模式串
 		if j == n {
 			return i - n + 1
 		}
@@ -42,16 +43,19 @@ func strStr(haystack string, needle string) int {
 	return -1
 }
 
+// 前缀表
 func getNext(next []int, s string) {
 	j := 0
-	next[0] = j
+	next[0] = j // 记录最长相等前后缀长度
 	for i := 1; i < len(s); i++ {
-		for j > 0 && s[i] != s[j] {
-			j = next[j-1]
+		for j > 0 && s[i] != s[j] { // 前后缀不相同
+			j = next[j-1] // 向前回退
 		}
+		// 找到相同前后缀
 		if s[i] == s[j] {
 			j++
 		}
+		// 将j（前缀的长度）赋给next[i], 因为next[i]要记录相同前后缀的长度
 		next[i] = j
 	}
 }

@@ -26,6 +26,10 @@ type ans28 struct {
 func Test_Problem28(t *testing.T) {
 
 	qs := []question28{
+		{
+			para28{"aabaabaafa", "aabaaf"},
+			ans28{3},
+		},
 
 		{
 			para28{"abab", "ab"},
