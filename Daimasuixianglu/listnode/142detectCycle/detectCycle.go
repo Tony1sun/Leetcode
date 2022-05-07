@@ -5,10 +5,10 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// https://leetcode-cn.com/problems/linked-list-cycle-ii/
 // 142.环形链表II
 // 判断链表是否环
 // 如果有环，如何找到这个环的入口
-
 func detectCycle(head *ListNode) *ListNode {
 	slow, fast := head, head
 	for fast != nil && fast.Next != nil {

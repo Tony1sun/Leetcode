@@ -13,6 +13,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	cur := head
 	prev := dummyHead
 	i := 1
+	// cur 先走n+1步
 	for cur != nil {
 		cur = cur.Next
 		if i > n {
