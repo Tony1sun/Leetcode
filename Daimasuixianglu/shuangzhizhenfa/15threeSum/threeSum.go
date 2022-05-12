@@ -32,7 +32,7 @@ func threeSum(nums []int) [][]int {
 				for l < r && nums[l] == n2 {
 					l++
 				}
-				for l < r && nums[l] == n3 {
+				for l < r && nums[r] == n3 {
 					r--
 				}
 			} else if n1+n2+n3 < 0 {

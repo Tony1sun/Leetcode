@@ -2,6 +2,7 @@ package Leetcode
 
 import "sort"
 
+// https://leetcode.cn/problems/4sum/
 func fourSum(nums []int, target int) [][]int {
 	if len(nums) < 4 {
 		return nil
@@ -10,12 +11,12 @@ func fourSum(nums []int, target int) [][]int {
 	var res [][]int
 	for i := 0; i < len(nums)-3; i++ {
 		n1 := nums[i]
-		if i > 0 && n1 == nums[i-1] {
+		if i > 0 && n1 == nums[i-1] { // 去重
 			continue
 		}
 		for j := i + 1; j < len(nums)-2; j++ {
 			n2 := nums[j]
-			if j > i+1 && n2 == nums[j-1] {
+			if j > i+1 && n2 == nums[j-1] { // 去重
 				continue
 			}
 			l := j + 1
