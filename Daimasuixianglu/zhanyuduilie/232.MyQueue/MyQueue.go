@@ -1,5 +1,6 @@
 package main
 
+// 用栈实现队列
 type MyQueue struct {
 	stack []int
 	back  []int
