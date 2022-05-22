@@ -18,4 +18,6 @@ func Test_MyQueue(t *testing.T) {
 	fmt.Printf("param_3 = %v\n", param3)
 	param4 := obj.Empty()
 	fmt.Printf("param_4 = %v\n", param4)
+	obj.Push(3)
+	fmt.Printf("obj= %v\n", obj)
 }
