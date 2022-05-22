@@ -3,7 +3,8 @@ package main
 // https://leetcode.cn/problems/valid-parentheses/
 
 func isValid(s string) bool {
-	stack := []string{}
+	// stack := []string{}
+	var stack []string
 
 	for _, ch := range s {
 		c := string(ch)
