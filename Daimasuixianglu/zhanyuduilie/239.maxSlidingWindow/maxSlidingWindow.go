@@ -16,7 +16,7 @@ func (m *MyQueue) Front() int {
 	return m.queue[0]
 }
 
-// 返回当前窗口最后一个
+// 返回当前窗口入口值
 func (m *MyQueue) Back() int {
 	return m.queue[len(m.queue)-1]
 }
