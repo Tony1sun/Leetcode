@@ -1,12 +1,18 @@
 package main
 
-import "container/list"
+import (
+	"container/list"
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+	"github.com/halfrost/LeetCode-Go/structures"
+)
+
+// type TreeNode struct {
+// 	Val   int
+// 	Left  *TreeNode
+// 	Right *TreeNode
+// }
+
+type TreeNode = structures.TreeNode
 
 // 递归法
 // 前序遍历

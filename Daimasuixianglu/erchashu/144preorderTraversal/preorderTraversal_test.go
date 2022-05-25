@@ -3,23 +3,58 @@ package main
 import (
 	"fmt"
 	"testing"
+
+	"github.com/halfrost/LeetCode-Go/structures"
 )
+
+type question144 struct {
+	para144
+	ans144
+}
+
+// para 是参数
+// one 代表第一个参数
+type para144 struct {
+	one []int
+}
+
+// ans 是答案
+// one 代表第一个答案
+type ans144 struct {
+	one []int
+}
 
 func Test_Problem144(t *testing.T) {
 
-	one := &TreeNode{Val: 1}
-	two := &TreeNode{Val: 2}
-	one.Left = two
-	three := &TreeNode{Val: 3}
-	two.Left = three
-	four := &TreeNode{Val: 4}
-	two.Right = four
-	five := &TreeNode{Val: 5}
-	one.Right = five
-	six := &TreeNode{Val: 6}
-	five.Right = six
+	qs := []question144{
 
-	fmt.Println(preorderTraversal(one))
-	// fmt.Println(inorderTraversal(one))
-	// fmt.Println(postorderTraversal(one))
+		{
+			para144{[]int{}},
+			ans144{[]int{}},
+		},
+
+		{
+			para144{[]int{1}},
+			ans144{[]int{1}},
+		},
+
+		{
+			para144{[]int{1, structures.NULL, 2, 3}},
+			ans144{[]int{1, 2, 3}},
+		},
+		{
+			para144{[]int{1, 2, 3, 4, 5, 6}},
+			ans144{[]int{1, 2, 3}},
+		},
+	}
+
+	fmt.Printf("------------------------Leetcode Problem 144------------------------\n")
+
+	for _, q := range qs {
+		_, p := q.ans144, q.para144
+		fmt.Printf("【input】:%v      ", p)
+		root := structures.Ints2TreeNode(p.one)
+		fmt.Printf("【output】:%v      \n", preorderTraversal(root))
+	}
+	fmt.Printf("\n\n\n")
 }
