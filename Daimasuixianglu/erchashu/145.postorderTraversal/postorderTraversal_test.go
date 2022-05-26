@@ -28,20 +28,20 @@ func Test_Problem144(t *testing.T) {
 
 	qs := []question144{
 
-		// {
-		// 	para144{[]int{}},
-		// 	ans144{[]int{}},
-		// },
+		{
+			para144{[]int{}},
+			ans144{[]int{}},
+		},
 
-		// {
-		// 	para144{[]int{1}},
-		// 	ans144{[]int{1}},
-		// },
+		{
+			para144{[]int{1}},
+			ans144{[]int{1}},
+		},
 
-		// {
-		// 	para144{[]int{1, structures.NULL, 2, 3}},
-		// 	ans144{[]int{1, 2, 3}},
-		// },
+		{
+			para144{[]int{1, structures.NULL, 2, 3}},
+			ans144{[]int{1, 2, 3}},
+		},
 		{
 			para144{[]int{1, 2, 3, 4, 5, 6}},
 			ans144{[]int{1, 2, 3}},
@@ -54,7 +54,7 @@ func Test_Problem144(t *testing.T) {
 		_, p := q.ans144, q.para144
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", preorderTraversal(root))
+		fmt.Printf("【output】:%v      \n", postorderTraversal(root))
 	}
 	fmt.Printf("\n\n\n")
 }
