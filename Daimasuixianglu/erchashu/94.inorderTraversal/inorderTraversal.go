@@ -8,6 +8,7 @@ import (
 
 type TreeNode = structures.TreeNode
 
+// 递归法
 /*
 // 中序遍历
 func inorderTraversal(root *TreeNode) (res []int) {
@@ -25,6 +26,7 @@ func inorderTraversal(root *TreeNode) (res []int) {
 }
 */
 
+// 迭代法-左中右
 func inorderTraversal(root *TreeNode) (res []int) {
 	var ans []int
 	if root == nil {
@@ -37,6 +39,7 @@ func inorderTraversal(root *TreeNode) (res []int) {
 			st.PushBack(cur) // 将一个值为v的新元素插入链表的最后一个位置，返回生成的新元素。
 			cur = cur.Left
 		} else {
+			// 删除链表中的元素，并返回Value。Back 返回链表最后一个元素或nil
 			cur = st.Remove(st.Back()).(*TreeNode)
 			ans = append(ans, cur.Val)
 			cur = cur.Right

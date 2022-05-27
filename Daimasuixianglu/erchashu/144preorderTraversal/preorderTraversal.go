@@ -47,7 +47,7 @@ func preorderTraversal(root *TreeNode) (res []int) {
 		// 删除链表中的元素，并返回Value。Back 返回链表最后一个元素或nil
 		node := st.Remove(st.Back()).(*TreeNode)
 		ans = append(ans, node.Val)
-		if node.Right != nil {
+		if node.Right != nil { // 先把右孩子入栈，出栈的时候才是中左右的顺序
 			st.PushBack(node.Right)
 		}
 		if node.Left != nil {
