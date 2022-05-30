@@ -38,10 +38,10 @@ func Test_Problem144(t *testing.T) {
 		// 	ans144{[]int{1}},
 		// },
 
-		{
-			para144{[]int{1, structures.NULL, 2, 3}},
-			ans144{[]int{1, 2, 3}},
-		},
+		// {
+		// 	para144{[]int{1, structures.NULL, 2, 3}},
+		// 	ans144{[]int{1, 2, 3}},
+		// },
 		{
 			para144{[]int{1, 2, 3, 4, 5, 6}},
 			ans144{[]int{1, 2, 3}},

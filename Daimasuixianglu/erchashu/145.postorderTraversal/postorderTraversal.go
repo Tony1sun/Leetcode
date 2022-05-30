@@ -1,11 +1,15 @@
 package main
 
-import "github.com/halfrost/LeetCode-Go/structures"
+import (
+	"container/list"
+
+	"github.com/halfrost/LeetCode-Go/structures"
+)
 
 type TreeNode = structures.TreeNode
 
 /*
-// 后序遍历
+// 后序遍历-递归法
 func postorderTraversal(root *TreeNode) (res []int) {
 	var traversal func(node *TreeNode)
 	traversal = func(node *TreeNode) {
@@ -21,6 +25,32 @@ func postorderTraversal(root *TreeNode) (res []int) {
 }
 */
 
+// 迭代法-左右中
 func postorderTraversal(root *TreeNode) (res []int) {
-	return
+	var ans []int
+	if root == nil {
+		return ans
+	}
+	st := list.New()
+	st.PushBack(root)
+	for st.Len() > 0 {
+		node := st.Remove(st.Back()).(*TreeNode)
+		ans = append(ans, node.Val)
+		if node.Left != nil {
+			st.PushBack(node.Left)
+		}
+		if node.Right != nil {
+			st.PushBack(node.Right)
+		}
+	}
+	reverse(ans)
+	return ans
+}
+
+func reverse(a []int) {
+	l, r := 0, len(a)-1
+	for l < r {
+		a[l], a[r] = a[r], a[l]
+		l, r = l+1, r-1
+	}
 }
