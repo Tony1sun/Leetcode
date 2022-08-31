@@ -1,0 +1,29 @@
+package Leetcode
+
+// 第454题.四数相加II
+// 1、首先定义 一个unordered_map，key放a和b两数之和，value 放a和b两数之和出现的次数。
+// 2、遍历大A和大B数组，统计两个数组元素之和，和出现的次数，放到map中。
+// 3、定义int变量count，用来统计a+b+c+d = 0 出现的次数。
+// 4、在遍历大C和大D数组，找到如果 0-(c+d) 在map中出现过的话，就用count把map中key对应的value也就是出现次数统计出来。
+// 5、最后返回统计值 count 就可以了
+// 有四个数值，从每个数组各自选一个使它们的和为0；将前两个数组两两组合的和作为hash表的key，然后再依次求出后两个数组中两两之和，在hash表中搜寻看能不能找到他们的相反数
+
+作者：huge-9
+链接：https://leetcode-cn.com/problems/4sum-ii/solution/454si-shu-xiang-jia-ii-by-huge-9-canw/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+func fourSumCount(nums1 []int, nums2 []int, nums3 []int, nums4 []int) int {
+	m := make(map[int]int)
+	var count int
+	for _, v1 := range nums1 {
+		for _, v2 := range nums2 {
+			m[v1+v2]++
+		}
+	}
+	for _, v3 := range nums3 {
+		for _, v4 := range nums4 {
+			count += m[-(v3 + v4)]
+		}
+	}
+	return count
+}

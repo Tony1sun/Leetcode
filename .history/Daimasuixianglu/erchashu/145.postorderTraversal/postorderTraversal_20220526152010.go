@@ -1,0 +1,7 @@
+package main
+
+
+type TreeNode = structures.TreeNode
+
+
+func postorderTraversal(root *TreeNode	) (res []int)
