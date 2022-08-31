@@ -28,15 +28,15 @@ func Test_levelOrder(t *testing.T) {
 
 	qs := []question102{
 
-		{
-			para102{[]int{}},
-			ans102{[][]int{}},
-		},
+		// {
+		// 	para102{[]int{}},
+		// 	ans102{[][]int{}},
+		// },
 
-		{
-			para102{[]int{1}},
-			ans102{[][]int{{1}}},
-		},
+		// {
+		// 	para102{[]int{1}},
+		// 	ans102{[][]int{{1}}},
+		// },
 
 		{
 			para102{[]int{3, 9, 20, structures.NULL, structures.NULL, 15, 7}},
