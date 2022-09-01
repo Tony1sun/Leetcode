@@ -52,7 +52,7 @@ func backspaceCompare(s string, t string) bool {
 				}
 			}
 		}
-		// 有一个遍历到头部
+		// 有一个遍历到头部，就跳出循环
 		if i < 0 || j < 0 {
 			break
 		}

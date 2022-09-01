@@ -26,20 +26,20 @@ type ans844 struct {
 func Test_backspaceCompare(t *testing.T) {
 	qs := []question844{
 
-		{
-			para844{"ab#c", "ad#c"},
-			ans844{true},
-		},
+		// {
+		// 	para844{"ab#c", "ad#c"},
+		// 	ans844{true},
+		// },
 
-		{
-			para844{"ab##", "c#d#"},
-			ans844{true},
-		},
+		// {
+		// 	para844{"ab##", "c#d#"},
+		// 	ans844{true},
+		// },
 
-		{
-			para844{"a##c", "#a#c"},
-			ans844{true},
-		},
+		// {
+		// 	para844{"a##c", "#a#c"},
+		// 	ans844{true},
+		// },
 
 		{
 			para844{"a#c", "b"},
