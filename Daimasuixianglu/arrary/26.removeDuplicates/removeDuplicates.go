@@ -1,5 +1,6 @@
 package main
 
+// 快慢指针
 func removeDuplicates(nums []int) int {
 	n := len(nums)
 	if n < 1 {
